@@ -1,0 +1,1 @@
+from .farm_api_gateway_settings import *
