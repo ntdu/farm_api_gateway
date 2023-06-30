@@ -17,6 +17,7 @@ class FastApiAppSetting(BaseSettingMixin):
     FASTAPI_MIDDLEWARE_ENABLE_TrustedHostMiddleware: bool = False
     FASTAPI_MIDDLEWARE_ENABLE_CORSMiddleware: bool = True
     FASTAPI_MIDDLEWARE_ENABLE_SessionMiddleware: bool = False
+    FASTAPI_MIDDLEWARE_ENABLE_GZipMiddleware: bool = True
 
     FASTAPI_MIDDLEWARE_TRUSTED_HOST: List[str] = ["localhost", "127.0.0.1"]
     FASTAPI_MIDDLEWARE_LOCAL_IPS: List[str] = ["127.0.0.1", "localhost"]
@@ -25,6 +26,7 @@ class FastApiAppSetting(BaseSettingMixin):
     FASTAPI_MIDDLEWARE_CORS_ALLOW_ORIGINS: List[str] = ["*"]
     FASTAPI_MIDDLEWARE_CORS_ALLOW_METHODS: List[str] = ["*"]
     FASTAPI_MIDDLEWARE_CORS_ALLOW_HEADERES: List[str] = ["*"]
+    FASTAPI_MIDDLEWARE_GZIP_MINIMUM_SIZE: int = 1000
     # -----------------end-----------------
 
     def create_fastapi_app():
