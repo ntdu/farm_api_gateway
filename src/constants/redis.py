@@ -1,3 +1,7 @@
 # for redis manager
 DEFAULT_CACHE_CLIENT_NAME = 0
 DEFAULT_PUBUB_CLIENT_NAME = 0
+
+REDIS_CLIENT_NAME_SUBSCRIBER = 'redis-subscriber-client'
+
+
