@@ -8,10 +8,8 @@ from redis.client import PubSub
 
 from core import constants
 from core.abstractions import AbsRedisClient
-from redis import Redis as SyncRedis
 from typing import Callable, Dict
 
-from .mixins import DefaultMixins
 
 from src.abstractions import AbsRedisMixin
 
