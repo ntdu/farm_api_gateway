@@ -10,7 +10,6 @@ async def event_01_connect_redis():
     logger.info('startup-event: event_01_connect_redis running...')
     from src.redis_client import RedisClient, RedisManager
 
-
     redis_client = RedisClient()
     connect_params = (settings.get_redis_server_url(),)
     await redis_client.connect(*connect_params)
