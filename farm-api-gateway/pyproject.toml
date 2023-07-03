@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "farm-api-gateway"
+version = "0.1.0"
+description = ""
+authors = ["ntdu <ntdu198@gmail.com>"]
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.98.0"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+itsdangerous = "^2.1.2"
+ujson = "^5.8.0"
+redis = "^4.6.0"
+aiohttp = "^3.8.4"
+passlib = "^1.7.4"
+bcrypt = "^4.0.1"
+jwt = "^1.3.1"
+pyjwt = "^2.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
