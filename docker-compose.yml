@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  api-gateway:
+    build:
+      context: ./farm-api-gateway
+      dockerfile: Dockerfile
+
+    container_name: api-gateway
+
+    ports:
+      - "8000:5000"
+
+  crop-health-service:
+    build:
+      context: ./crop-health-service
+      dockerfile: Dockerfile
+    
+    container_name: crop-health-service
+
+    ports:
+      - "8001:5001"
+
+  users-service:
+    build:
+      context: ./farm-api-gateway/user_service
+      dockerfile: Dockerfile
+    
+    container_name: users-service
+
+    command: uvicorn main:app --host 0.0.0.0 --port 5002
+    ports:
+      - "8002:5002"

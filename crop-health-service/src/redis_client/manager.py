@@ -29,7 +29,7 @@ class RedisManager(SingletonClass, AbsRedisManager):
             raise ValueError(f'expected client is an instance of AbsRedisClient get {type(client)=}')
         self._cache_clients.update({name: client})
 
-    def get_cache_client(self, name: str | int = constants.DEFAULT_CACHE_CLIENT_NAME) -> AbsRedisClient:
+    def get_cache_client(self, name: str = constants.DEFAULT_CACHE_CLIENT_NAME) -> AbsRedisClient:
         return self._cache_clients.get(name)
 
     def remove_cache_client(self, name: str):
@@ -41,7 +41,7 @@ class RedisManager(SingletonClass, AbsRedisManager):
             raise ValueError(f'expected client is an instance of AbsRedisClient get {type(client)=}')
         self._pubsub_clients.update({name: client})
 
-    def get_pubsub_client(self, name: str | int = constants.DEFAULT_PUBUB_CLIENT_NAME) -> AbsRedisClient:
+    def get_pubsub_client(self, name: str = constants.DEFAULT_PUBUB_CLIENT_NAME) -> AbsRedisClient:
         return self._pubsub_clients.get(name)
 
     def remove_pubsub_client(self, name: str):

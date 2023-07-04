@@ -57,7 +57,7 @@ class AbsRedisManager(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def get_cache_client(self, name: str | int) -> AbsRedisClient:
+    def get_cache_client(self, name: str) -> AbsRedisClient:
         raise NotImplementedError
 
     @abstractmethod
@@ -69,7 +69,7 @@ class AbsRedisManager(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def get_pubsub_client(self, name: str | int) -> AbsRedisClient:
+    def get_pubsub_client(self, name: str) -> AbsRedisClient:
         raise NotImplementedError
 
     @abstractmethod

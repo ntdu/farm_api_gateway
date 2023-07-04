@@ -8,7 +8,7 @@ from .base_settings_mixin import BaseSettingMixin
 
 class GunicornSetting(BaseSettingMixin):
     GUNICORN_HOST: str = '0.0.0.0'
-    GUNICORN_PORT: str = '5013'
+    GUNICORN_PORT: str = '5001'
     GUNICORN_BIND_PATH: Optional[str] = None
     GUNICORN_WORKER_CONCURRENCY: Optional[int] = 4
 
